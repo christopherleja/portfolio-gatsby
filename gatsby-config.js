@@ -1,14 +1,22 @@
+const dotenv = require("dotenv");
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "gatsby-portfolio",
+    title: "Christopher Leja's Portfolio",
+    description:
+      "Christopher Leja is a fullstack software engineer with experience in JavaScript and Ruby frameworks",
   },
   plugins: [
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "xdd8AoZBTP-AlGELnzghDM8-Y6SvSIUz5v-_AQykhk0",
-        spaceId: "el8451sv5i8e",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-sass",
@@ -31,5 +39,6 @@ module.exports = {
       },
       __key: "images",
     },
+    "gatsby-plugin-postcss",
   ],
 };

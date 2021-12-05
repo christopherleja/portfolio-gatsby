@@ -1,0 +1,13 @@
+.resume {
+  &-container {
+    @apply bg-white bg-opacity-50 lg:w-4/5 border-2 border-sienna mx-auto mt-8 p-8 lg:px-8;
+  }
+
+  &-title {
+    @apply text-blueDark font-semibold md:pt-2 md:border-b-2 md:border-sienna md:text-lg text-center uppercase;
+  }
+
+  &-company-title {
+    @apply text-lg;
+  }
+}

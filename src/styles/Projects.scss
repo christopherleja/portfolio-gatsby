@@ -1,0 +1,9 @@
+.projects-bg-gradient {
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.project-modal {
+  margin-top: 8rem;
+  @apply bg-blueLight border-sienna border-2 overflow-scroll;
+}

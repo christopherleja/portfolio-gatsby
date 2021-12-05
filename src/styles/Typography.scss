@@ -1,0 +1,27 @@
+.h1 {
+  @apply text-3xl sm:text-4xl uppercase text-center mb-16 font-semibold;
+}
+
+.h2 {
+  @apply text-2xl uppercase text-center;
+}
+
+.h3 {
+  @apply text-xl uppercase text-center;
+}
+
+.h4 {
+  @apply text-lg text-center;
+}
+
+.h5 {
+  @apply text-center uppercase;
+}
+
+p {
+  @apply py-2;
+}
+
+// .app-header {
+//   @apply text-7xl font-semibold;
+// }

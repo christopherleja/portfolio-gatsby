@@ -1,0 +1,9 @@
+.header {
+  &-bg {
+    @apply relative w-screen h-screen mx-auto flex flex-col justify-center align-middle overflow-scroll bg-black opacity-90;
+
+    &-video {
+      @apply absolute top-0 bottom-0 mx-auto w-full h-screen -z-1 object-cover opacity-70;
+    }
+  }
+}
