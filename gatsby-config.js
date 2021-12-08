@@ -1,8 +1,6 @@
 const dotenv = require("dotenv");
 
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config();
-}
+dotenv.config();
 
 module.exports = {
   siteMetadata: {
@@ -19,7 +17,15 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"),
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
