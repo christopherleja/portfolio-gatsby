@@ -1,9 +1,23 @@
 import React from "react";
 import { ed, jobs } from "../data";
 import ResumeItem from "./ResumeItem";
+import { useStaticQuery, graphql } from "gatsby";
 
-const Resume = ({ resume }) => {
-  const file = resume?.includes?.Asset[0]?.fields?.file?.url;
+const Resume = () => {
+  const resume = useStaticQuery(graphql`
+    query {
+      contentfulResume {
+        resume {
+          file {
+            fileName
+            url
+          }
+        }
+      }
+    }
+  `);
+
+  const file = resume?.contentfulResume?.resume?.file?.url;
 
   return (
     <div id="resume">
